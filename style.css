@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+*,::before,::after{
+    box-sizing: border-box;
+}
+:root{
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+    --very-dark-blue-main-BG: hsl(217, 54%, 11%);
+    --very-dark-blue-card-BG: hsl(216, 50%, 16%);
+    --very-dark-blue-line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --cyan-low: hsla(178, 100%, 50%,.6);
+}
+body{
+    color: var(--white);
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--very-dark-blue-main-BG);
+}
+main{
+    width: 100%;
+    height: 100%;
+}
+.card{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 300px;
+    padding: 20px 20px 10px 20px;
+    border-radius: 10px;
+    background-color: var(--very-dark-blue-card-BG);
+}
+.img-container{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+.eth-img{
+    width: 100%;
+    border-radius: 8px;
+    position: relative;
+}
+.img-container::before{
+    position: absolute;
+    top: 1px;
+    left: 0;
+    content: '';
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 258px;
+    border-radius: 10px;
+    z-index: 0;
+    background-color: var(--cyan-low);
+    background-image: url("images/icon-view.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.eth-img:hover{
+    opacity: .4;
+}
+h1{
+    font-size: 1.1rem;
+}
+p{
+    font-size: .8rem;
+    color: var(--soft-blue);
+}
+a{
+    color: var(--white);
+    text-decoration: none;
+
+}
+.flex1{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--very-dark-blue-line);
+    margin-bottom: .5rem;
+}
+.flex1 div{
+    display: flex;
+    align-items: center;
+    column-gap: .3rem;
+}
+.flex1 p{
+    font-size: .7rem;
+}
+.flex2{
+    display: flex;
+    align-items: center;
+    column-gap: .5rem;
+}
+.flex2 p{
+    font-size: .7rem;
+
+}
+
+.flex2 img{
+    width: 30px;
+    height: 30px;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+.glow:hover{
+    color: var(--cyan);
+}
+.attribution{
+    display: none;
+}
